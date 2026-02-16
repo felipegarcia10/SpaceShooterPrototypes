@@ -6,8 +6,16 @@ public class AsteroidMovement : MonoBehaviour
     [SerializeField] private float speed = 10f;
     [SerializeField] private int scoreValue = 10;
     [SerializeField] private int spawnProbability = 10;
-    public GameObject powerUp;
+    [SerializeField] public float lifetime = 5f;
+    public GameObject shieldPowerUp;
+    public GameObject fireRatedPowerUp;
     private int _randpowerUpSpawn;
+
+
+    private void Start()
+    {
+        Destroy(gameObject, lifetime);
+    }
 
     void Update()
     {
@@ -35,7 +43,11 @@ public class AsteroidMovement : MonoBehaviour
 
         if (_randpowerUpSpawn == spawnProbability - 1)
         {
-            Instantiate(powerUp, this.transform.position, Quaternion.identity);
+            Instantiate(shieldPowerUp, this.transform.position, Quaternion.identity);
+        }
+        if (_randpowerUpSpawn == 0)
+        {
+            Instantiate(fireRatedPowerUp, this.transform.position, Quaternion.identity);
         }
     }
 

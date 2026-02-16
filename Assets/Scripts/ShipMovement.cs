@@ -6,20 +6,20 @@ using UnityEngine.SceneManagement;
 public class ShipMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] public GameObject bullet;
-    [SerializeField] public GameObject shield;
+    [SerializeField] protected float moveSpeed = 10f;
+    [SerializeField] protected GameObject bullet;
+    [SerializeField] protected GameObject shield;
     GameObject bulletClone;
 
-    private Vector2 _moveVector;
+    protected Vector2 _moveVector;
 
     [Header("Boundaries padding")]
-    [SerializeField] private float padding = 0.5f;
+    [SerializeField] protected float padding = 0.5f;
 
-    private Camera mainCamera;
-    private float fixedY;
+    protected Camera mainCamera;
+    protected float fixedY;
 
-    void Start()
+    protected virtual void Start()
     {
         mainCamera = Camera.main;
         fixedY = transform.position.y;
@@ -34,10 +34,10 @@ public class ShipMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        ClampX();
+        ClampPosition();
     }
 
-    private void ClampX()
+    protected virtual void ClampPosition()
     {
         // Distance from camera along its forward axis (Y)
         float yDistance = Mathf.Abs(mainCamera.transform.position.y - fixedY);
@@ -62,13 +62,13 @@ public class ShipMovement : MonoBehaviour
         _moveVector = value.Get<Vector2>();
     }
 
-    public void OnAttack(InputValue value)
+    public virtual void OnAttack(InputValue value)
     {
         bulletClone = Instantiate(bullet, this.transform.position, this.transform.rotation);
 
 
     }
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Shield"))
         {

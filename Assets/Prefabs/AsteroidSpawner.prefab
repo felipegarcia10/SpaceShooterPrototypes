@@ -47,7 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidSpawnerController
   objectPrefab: {fileID: 5538345575089593773, guid: 4eeaf92b4f4ff3a45b2aade65a956696, type: 3}
   spawnAreaSize: {x: 10, y: 10, z: 10}
-  spawnInterval: 2
+  spawnInterval: 0.6
+  desiredScale: {x: 0, y: 0, z: 0}
 --- !u!65 &6776555871341953051
 BoxCollider:
   m_ObjectHideFlags: 0

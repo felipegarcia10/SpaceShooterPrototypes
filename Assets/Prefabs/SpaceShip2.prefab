@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8957134945084104220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1451149228058214302, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679818471508280906, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005557491165889626, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089403425171449543, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_Name
+      value: SpaceShip2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594199488517499020, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131287897576450774, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017175724361136620, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9105157417342041411, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3089403425171449543, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6799336831445829990}
+  m_SourcePrefab: {fileID: 100100000, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+--- !u!1 &6238020728969623771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3089403425171449543, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+  m_PrefabInstance: {fileID: 8957134945084104220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6799336831445829990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238020728969623771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4790a90a53253de4db93560d86092900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipMovement2D
+  moveSpeed: 10
+  bullet: {fileID: 2241307014641043035, guid: 77a5ae244e6f900418f3664f2cef8856, type: 3}
+  shield: {fileID: 9147638492174371050}
+  padding: 2
+--- !u!1 &9147638492174371050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 197263898771429110, guid: cbd04200096aac440b049e5c7a725bae, type: 3}
+  m_PrefabInstance: {fileID: 8957134945084104220}
+  m_PrefabAsset: {fileID: 0}
